@@ -1,6 +1,6 @@
-# Flexionics & Koltrast — Reikna AS Acquisition Pitch Deck
+# Flexionics ✕ Koltrast — Reikna AS Acquisition Pitch Deck
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](package.json)
+[![Version](https://img.shields.io/badge/version-1.1.0-purple.svg)](package.json)
 [![Tech Stack](https://img.shields.io/badge/stack-React_19_|_TypeScript_|_Vite_|_TailwindCSS_v4-emerald.svg)](package.json)
 [![License](https://img.shields.io/badge/license-Proprietary-red.svg)](package.json)
 
@@ -11,10 +11,10 @@ An interactive, high-fidelity 16:9 investor presentation deck built for the prop
 ## 📌 Executive Overview
 
 This repository houses the interactive digital pitch deck and automated 8K/4K export engine for the strategic acquisition of:
-1. **Physical Asset Layer (Koltrast)**: Utansjö industrial compute hub in Swedish bidding zone SE2 (2 MW operational + 30 MW approved Phase 1 expansion with 120 kV heavy substation interconnect).
-2. **Software Intelligence Layer (Flexionics)**: Full IP transfer of the Flexionics Flexibility-as-a-Service (FaaS) platform, autonomous grid-arbitrage algorithms, and sub-second Svenska kraftnät ancillary service dispatch system.
+1. **Physical Asset Layer (Koltrast)**: 14 MW operational hybrid data centre infrastructure across Boden (12 MW, SE1) and Utansjö (2 MW, SE2) with 18 modular containers housing 5,384 servers, plus a shovel-ready 30 MW Phase 1 expansion at Utansjö on the Swedish national grid.
+2. **Software Intelligence Layer (Flexionics)**: 100% proprietary in-house intellectual property including Iceberg Edge on-site controller, Harbour cross-site fleet manager, Compass reporting, Northwatch monitoring, and Polaris deployment engine with active Svenska kraftnät grid pre-qualifications.
 
-Together, these form an end-to-end sovereign European AI Neo-Cloud infrastructure with negative effective energy costs via automated grid balancing.
+Together, these form an end-to-end sovereign European AI Neo-Cloud infrastructure with stacked digital computing and grid flexibility revenues.
 
 ---
 
@@ -22,19 +22,19 @@ Together, these form an end-to-end sovereign European AI Neo-Cloud infrastructur
 
 | # | Slide ID | Title | Core Focus |
 |---|---|---|---|
-| **01** | `cover` | European Neo-Cloud Infrastructure | Executive title, transaction perimeter, and partner overview |
-| **02** | `buyer-thesis` | Why Flexionics + Koltrast for Reikna | Strategic bridge between sovereign AI compute and Swedish grid assets |
-| **03** | `deal-perimeter` | Ground Asset & Tech Platform | Clear division between Koltrast (Physical) & Flexionics (IP/Software) |
-| **04** | `macro-driver` | The AI Power Dilemma & Flexibility Solution | Market analysis of Nordic power bottlenecks and virtual battery economics |
+| **01** | `cover` | European Neo-Cloud Infrastructure | Executive title, transaction perimeter, 14 MW operating fleet, 30 MW expansion, 100% proprietary software IP |
+| **02** | `buyer-thesis` | Why Flexionics + Koltrast for Reikna | Strategic bridge: immediate Swedish power, software operating system, turnkey engineering, downside protection |
+| **03** | `flexionics-business` | The Flexionics Business: What We Do & How We Do It | 3 pillars (Hybrid DC, Flexibility Services, 100% In-House Software IP) + 4-stage operational pipeline |
+| **04** | `macro-driver` | The AI Power Dilemma & Flexibility Solution | Eliminating grid queues, managing Nordic renewable price volatility, compute vs. chemical battery storage |
 | **05** | `business-model` | Dual Revenue Architecture | 24/7 compute revenue baseline combined with high-margin grid ancillary revenue |
-| **06** | `utansjo-asset` | Utansjö Industrial Compute Hub | 2 MW live + 30 MW expansion, 120 kV substation, water cooling, zoning approvals |
-| **07** | `track-record` | Operational Evidence & Audited Metrics | 16,530 verified activations, 1.89B telemetry records, $6M+ historical revenue |
-| **08** | `software-platform` | Flexionics Software IP (FaaS Stack) | Architecture diagram of ingestion, control engine, and dispatch integrations |
-| **09** | `control-loop` | Autonomous Grid-Arbitrage & Dispatch | Sub-second telemetry loop, frequency response, and Spot/FCR-D/FFR automation |
-| **10** | `unit-economics` | Financial Projections & EBITDA Ramp | 2026–2029 forecast, MW scaling, EBITDA margins, and IRR metrics |
-| **11** | `team-koltrast` | Koltrast Physical Infrastructure Team | Key leadership, industrial construction, and Nordic grid execution track record |
-| **12** | `team-flexionics` | Flexionics Grid-Tech & AI Leadership | Core team behind autonomous dispatch, high-voltage software, and energy modeling |
-| **13** | `closing` | Strategic Alignment & Transaction Terms | Acquisition structure, working capital allocation, and next steps |
+| **06** | `asset-portfolio` | Tangible & Intangible Asset Portfolio | Comparative matrix: 14 MW active, 18 containers, 5,384 servers vs. 100% in-house software IP & SvK prequalifications |
+| **07** | `infrastructure-sites` | Operational Infrastructure Sites: Boden & Utansjö | Comparative site matrix: Boden (12 MW SE1), Utansjö (2 MW SE2), Utansjö Phase 1 (30 MW expansion SE2) |
+| **08** | `track-record` | Operational Evidence & Audited Metrics | 14 MW registered fleet, 16,530 activations, 1.89B telemetry records, >$6M historical revenue |
+| **09** | `software-platform` | The Neo-Cloud Operating System: 5 In-House Modules | Architecture details of Iceberg Edge, Harbour, Compass, Northwatch, and Polaris |
+| **10** | `control-loop` | Autonomous Grid-Arbitrage & Dispatch Architecture | 10-second closed-loop control cycle, direct SFTP ingestion, and 0.5% active-power measurement |
+| **11** | `unit-economics` | Unit Economics & Capital Efficiency | ~$450k/MW install cost, ~$310k/MW annual operating profit, ~18-month payback, >50% Phase 1 IRR |
+| **12** | `team-joint` | Joint Leadership & Engineering Team | Balanced 5+5 operating unit: Flexionics leadership & core engineering + Koltrast Nordic site operations |
+| **13** | `closing` | Strategic Acquisition Summary | 100% equity purchase terms, 14 MW dual-site perimeter + 100% software IP, immediate Reikna integration |
 
 ---
 
@@ -120,6 +120,13 @@ Generated outputs will be saved in `dist/` as `Flexionics-Koltrast-Reikna-Acquis
 
 ## 🏷️ Version History
 
+- **`v1.1.0` (2026-09-20)**:
+  - Aligned presentation with founder feedback on business overview, asset portfolio, and joint team.
+  - Formatted brand header to `FLEXIONICS ✕ KOLTRAST` across all slides.
+  - Grounded infrastructure data in verified operational metrics: exactly 14 MW live capacity (Boden 12 MW + Utansjö 2 MW) across 18 containers and 5,384 servers + 30 MW Utansjö shovel-ready expansion.
+  - Purged unverified legacy stats (20 kV / 130 kV voltages, 679 hrs, 3-7 yrs queues, site MW splits) in favor of pure response times (FFR <1s, FCR-D 30s, mFRR 5-15m).
+  - Consolidated team into a single balanced 5+5 grid (Flexionics leadership & engineering + Koltrast Nordic site operations).
+  - Unified vertical layout and card spacing across Slide 3, Slide 6, and Slide 7 to eliminate dead vertical gaps.
 - **`v1.0.0` (2026-09-20)**:
   - Initial production release of the Reikna Acquisition 13-slide pitch deck.
   - Complete data content, financial projections, and operational telemetry.

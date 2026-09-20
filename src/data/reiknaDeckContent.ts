@@ -55,9 +55,12 @@ export interface SlideData {
   layout: 
     | 'cover' 
     | 'thesis' 
+    | 'flexionics_business'
     | 'perimeter' 
     | 'problem' 
     | 'business_model' 
+    | 'assets_portfolio'
+    | 'infrastructure_sites'
     | 'utansjo_asset' 
     | 'track_record' 
     | 'software_platform' 
@@ -65,6 +68,7 @@ export interface SlideData {
     | 'unit_economics' 
     | 'team_koltrast' 
     | 'team_flexionics'
+    | 'team_joint'
     | 'closing';
 }
 
@@ -75,7 +79,7 @@ export const deckMetadata = {
   date: "September 2026",
   companyFlexionics: "Flexionics Energy AG",
   companyKoltrast: "Koltrast Energy Solutions AB",
-  targetAsset: "Utansjö Site (2 MW Live + 30 MW Expansion Phase 1) & Full Software IP",
+  targetAsset: "14 MW Live Operating Infrastructure (Boden & Utansjö) + 30 MW Expansion & Full Software IP",
 };
 
 export const slides: SlideData[] = [
@@ -84,7 +88,7 @@ export const slides: SlideData[] = [
     slideNumber: 1,
     category: "Strategic Acquisition",
     title: "European Neo-Cloud Infrastructure",
-    subtitle: "Turnkey Nordic Grid-Flexibility Platform & 32 MW Utansjö Industrial Compute Asset",
+    subtitle: "Turnkey Nordic Grid-Flexibility Platform & 14 MW Operating Infrastructure (Boden & Utansjö) + 30 MW Expansion",
     layout: "cover",
   },
   {
@@ -96,12 +100,12 @@ export const slides: SlideData[] = [
     layout: "thesis",
   },
   {
-    id: "deal-perimeter",
+    id: "flexionics-business",
     slideNumber: 3,
-    category: "Transaction Perimeter",
-    title: "Two Complementary Layers: Ground Asset & Tech Platform",
-    subtitle: "Koltrast provides the physical Swedish infrastructure; Flexionics provides the software intelligence",
-    layout: "perimeter",
+    category: "Corporate Overview",
+    title: "The Flexionics Business: What We Do & How We Do It",
+    subtitle: "Full-stack hybrid data centre and grid-flexibility operator bridging industrial compute with renewable power systems",
+    layout: "flexionics_business",
   },
   {
     id: "macro-driver",
@@ -120,16 +124,24 @@ export const slides: SlideData[] = [
     layout: "business_model",
   },
   {
-    id: "utansjo-asset",
+    id: "assets-portfolio",
     slideNumber: 6,
-    category: "Physical Asset Layer (Koltrast)",
-    title: "Utansjö Industrial Compute Hub: 2 MW Live + 30 MW Expansion",
-    subtitle: "Direct 120 kV heavy substation interconnect in Swedish bidding zone SE2 with verified industrial zoning",
-    layout: "utansjo_asset",
+    category: "Asset Portfolio",
+    title: "Tangible & Intangible Asset Portfolio: Flexionics & Koltrast",
+    subtitle: "Verified balance of 14 MW operating infrastructure, 18 modular containers, 5,384 server fleet, and proprietary software IP",
+    layout: "assets_portfolio",
+  },
+  {
+    id: "infrastructure-sites",
+    slideNumber: 7,
+    category: "Physical Infrastructure (Koltrast)",
+    title: "Operational Infrastructure Sites: Boden & Utansjö",
+    subtitle: "14 MW active capacity across 18 containers plus 30 MW shovel-ready industrial expansion on the Swedish national grid",
+    layout: "infrastructure_sites",
   },
   {
     id: "track-record",
-    slideNumber: 7,
+    slideNumber: 8,
     category: "Operational Evidence",
     title: "Proven Track Record: Audited Production Numbers",
     subtitle: "16,530 verified activations across SE1 & SE2, 1.89 billion telemetry records, and $6M+ revenue delivered to date",
@@ -137,7 +149,7 @@ export const slides: SlideData[] = [
   },
   {
     id: "software-platform",
-    slideNumber: 8,
+    slideNumber: 9,
     category: "Software Layer (Flexionics)",
     title: "The Neo-Cloud Operating System: 5 In-House Modules",
     subtitle: "Autonomous edge dispatch, cross-site fleet coordination, and AI reporting without third-party licensing",
@@ -145,7 +157,7 @@ export const slides: SlideData[] = [
   },
   {
     id: "control-loop",
-    slideNumber: 9,
+    slideNumber: 10,
     category: "Engineering Architecture",
     title: "Closed-Loop Site Control & Real-Time Dispatch",
     subtitle: "10-second activation cycles, local failover resilience, and 0.5% SvK measurement accuracy",
@@ -153,27 +165,19 @@ export const slides: SlideData[] = [
   },
   {
     id: "unit-economics",
-    slideNumber: 10,
+    slideNumber: 11,
     category: "Financial Profile",
     title: "Asset Unit Economics & Capital Efficiency",
     subtitle: "Low install cost, 18-month payback, and high-margin software scalability",
     layout: "unit_economics",
   },
   {
-    id: "team-koltrast",
-    slideNumber: 11,
-    category: "People & Ground Execution",
-    title: "Koltrast: Heavy Infrastructure & Site Engineering",
-    subtitle: "Led by Colin Chapple with certified high-voltage electricians and site technicians in Sweden",
-    layout: "team_koltrast",
-  },
-  {
-    id: "team-flexionics",
+    id: "team-joint",
     slideNumber: 12,
     category: "People & Leadership",
-    title: "Flexionics: Executive Leadership & Technology Team",
-    subtitle: "Tier-one financial market risk architects, energy quant specialists, and production AI builders",
-    layout: "team_flexionics",
+    title: "Joint Leadership & Engineering Team: Flexionics & Koltrast",
+    subtitle: "Tier-1 financial market risk architects, energy quant specialists, and certified Swedish high-voltage engineering operators",
+    layout: "team_joint",
   },
   {
     id: "closing",
@@ -193,10 +197,10 @@ export const thesisPoints: ThesisPoint[] = [
     badge: "Immediate Time-to-Market",
     points: [
       "Compresses Reikna's operational timeline by 2+ years ahead of greenfield data center builds.",
-      "Utansjö provides 2 MW active operating compute today plus a shovel-ready 30 MW Phase 1 expansion.",
-      "Located in SE2, Europe's lowest-cost 100% fossil-free hydro and wind power bidding zone.",
+      "Secures 14 MW active operating compute today across Boden (12 MW) & Utansjö (2 MW), plus a shovel-ready 30 MW Phase 1 expansion at Utansjö.",
+      "Located in SE1 & SE2, Europe's lowest-cost 100% fossil-free hydro and wind power bidding zones.",
     ],
-    impact: "Secures live Swedish power while NDC Husnes (50-150 MW) is developed for 2028",
+    impact: "Secures 14 MW live Swedish power today while NDC Husnes (50-150 MW) is developed for 2028",
   },
   {
     title: "Proprietary Neo-Cloud Operating System",
@@ -230,98 +234,116 @@ export const thesisPoints: ThesisPoint[] = [
   },
 ];
 
-export const perimeterData = {
-  koltrast: {
-    title: "Koltrast Energy Solutions AB",
-    subtitle: "100% Swedish Operating Subsidiary · Ground Asset Layer",
-    points: [
-      {
-        title: "Utansjö Active Compute Facility",
-        desc: "2.0 MW operational hybrid data center connected at 20 kV in Swedish bidding area SE2.",
-      },
-      {
-        title: "30 MW Shovel-Ready Phase 1 Expansion",
-        desc: "Heavy 120 kV industrial substation feed with secured land agreements and zoning.",
-      },
-      {
-        title: "Physical Site Control & Maritime Access",
-        desc: "Long-term industrial land rights with deep-water port access for heavy modular logistics.",
-      },
-      {
-        title: "Grid Operator Relationships",
-        desc: "Established operational interconnections with regional utility E.ON and national grid SvK.",
-      },
-      {
-        title: "High-Voltage Engineering Leadership",
-        desc: "Led by Colin Chapple (25+ years heavy capital project execution across power and mining).",
-      },
-      {
-        title: "Certified Swedish On-Ground Crew",
-        desc: "Licensed high-voltage electricians and technicians managing switchgear and cooling 24/7.",
-      },
-    ],
-  },
-  flexionics: {
-    title: "Flexionics Energy AG",
-    subtitle: "Swiss Parent Entity · Technology & Flexibility Layer",
-    points: [
-      {
-        title: "100% Proprietary Software IP",
-        desc: "Fully in-house codebase with zero third-party software licensing dependencies or royalties.",
-      },
-      {
-        title: "Iceberg Edge Autonomous Controller",
-        desc: "10-second closed-loop control with embedded SQLite and disk-backed Parquet failover.",
-      },
-      {
-        title: "Harbour Cross-Site Fleet Manager",
-        desc: "Centralized cloud operations pane, live capacity tracking, and settlement audit trails.",
-      },
-      {
-        title: "Compass Governed Analytics Engine",
-        desc: "Server-validated reporting engine generating automated TSO reconciliation packs (57ms P95).",
-      },
-      {
-        title: "Polaris Version-Locked Release Pipeline",
-        desc: "Automated deployment engine with live state attestation and rollback (342 releases/month).",
-      },
-      {
-        title: "Svenska kraftnät Market Prequalifications",
-        desc: "Active regulatory certifications for Fast Frequency Reserve (FFR) and mFRR Up+Down.",
-      },
-    ],
-  },
+export interface BusinessPillar {
+  badge: string;
+  sub: string;
+  title: string;
+  desc: string;
+  bullets: string[];
+}
+
+export interface PipelineStep {
+  step: string;
+  title: string;
+  desc: string;
+  detail: string;
+}
+
+export const flexionicsBusinessData = {
+  pillars: [
+    {
+      badge: "Physical Infrastructure",
+      sub: "Owned & Operated Sites",
+      title: "Hybrid Data Centre Operations",
+      desc: "We own and operate containerised high-density data centres in Sweden across Boden and Utansjö, running continuous 24/7 compute workloads on 100% fossil-free Swedish grid power.",
+      bullets: [
+        "14 MW active operating capacity across 18 modular container units in Boden (12 MW) and Utansjö (2 MW).",
+        "5,384 server miners deployed, managed, and monitored with secure site controls and direct grid interconnects.",
+        "Operating history in Sweden since 2018 with on-ground electrical and cooling maintenance teams.",
+      ],
+    },
+    {
+      badge: "Energy Services",
+      sub: "Grid Balancing Engine",
+      title: "Flexibility Business Service",
+      desc: "We turn high-density compute loads into sub-second virtual batteries for Svenska kraftnät, monetizing frequency containment and reserve capacity without computational data loss.",
+      bullets: [
+        "Dual monetization engine: continuous 24/7 compute baseline + high-margin grid ancillary capacity and activation payments.",
+        "Sub-second load modulation (<0.7s) delivers rapid grid support without hardware damage or thermal lag.",
+        "Full-stack operator model: We manage the entire lifecycle from TSO qualification to daily bidding and settlement.",
+      ],
+    },
+    {
+      badge: "Proprietary Software",
+      sub: "Zero Third-Party Royalties",
+      title: "100% In-House Software IP",
+      desc: "We design, build, and operate proprietary edge-to-cloud control systems (Steering, Fleet Management, Reporting, Monitoring & Deployment) with zero third-party software licensing.",
+      bullets: [
+        "Iceberg Edge Controller: Autonomous on-site execution with local SQLite/Parquet failover.",
+        "Harbour Fleet Management: Cross-site single-pane-of-glass monitoring and live capacity orchestration.",
+        "Prompt Reporting & Polaris Pipelines: Automated compliance audit packs and zero-downtime releases.",
+      ],
+    },
+  ],
+  pipeline: [
+    {
+      step: "01",
+      title: "Connect",
+      desc: "14 MW Live Infrastructure",
+      detail: "18 modular containers across Boden & Utansjö on the Swedish grid.",
+    },
+    {
+      step: "02",
+      title: "Qualify",
+      desc: "TSO Market Certification",
+      detail: "In-house Svenska kraftnät pre-qualification across FCR-D, mFRR, and FFR.",
+    },
+    {
+      step: "03",
+      title: "Dispatch",
+      desc: "Sub-Second Edge Control",
+      detail: "Sub-second load modulation (<0.7s) via custom on-site firmware.",
+    },
+    {
+      step: "04",
+      title: "Monetize",
+      desc: "Dual Revenue Settlement",
+      detail: "Continuous compute cash flow stacked with high-margin grid payments.",
+    },
+  ],
 };
+
+export const perimeterData = flexionicsBusinessData;
 
 export const problemCards = [
   {
-    stat: "3–7 Yrs",
+    stat: "0 Wait",
     category: "Transmission Interconnection",
-    label: "Grid Connection Queues",
+    label: "Eliminating Grid Queues",
     bullets: [
-      "European data center developers face 3–7 year waiting queues for high-voltage grid connections.",
-      "AI cluster expansion is bottlenecked by power availability rather than GPU silicon delivery.",
-      "Utansjö eliminates this delay with secured 120 kV heavy substation capacity on the Swedish national grid.",
+      "Traditional European data center developments face multi-year waiting queues for high-voltage grid connections.",
+      "AI cluster expansion is severely bottlenecked by power access rather than server hardware availability.",
+      "Boden (12 MW) and Utansjö (2 MW) eliminate this waiting period with 14 MW active live capacity on the Swedish national grid.",
     ],
   },
   {
-    stat: "679 Hrs",
-    category: "Nordic Energy Pricing",
-    label: "Negative Price Hours (SE2)",
+    stat: "Volatile",
+    category: "Nordic Energy Dynamics",
+    label: "Power Price Volatility & Surpluses",
     bullets: [
-      "Rapid Nordic wind buildout generated 679 hours of zero or negative electricity prices in SE2 in 2025.",
-      "Inflexible data centers suffer margin compression or curtailment during volatile price regimes.",
-      "Flexible compute turns negative pricing into pure profit, consuming cheap power when paid to do so.",
+      "Surging Nordic hydro and wind generation creates frequent regional power surpluses and negative spot electricity pricing.",
+      "Inflexible traditional data centers cannot dynamically adjust power draw during volatile price swings.",
+      "Flexible compute dynamically absorbs surplus energy, stabilizing the regional grid while monetizing low-cost energy.",
     ],
   },
   {
     stat: "0 Fade",
-    category: "Storage Economics",
-    label: "Infinite Virtual Battery",
+    category: "Flexibility Economics",
+    label: "Compute vs. Chemical Storage",
     bullets: [
-      "Battery storage (BESS) costs €200k–€500k/MWh, maxes out at 4 hours, and suffers cycle degradation.",
-      "Flexible compute modulates load across infinite duration with zero chemical cell wear.",
-      "Servers generate 24/7 digital compute cash flow while simultaneously functioning as a virtual grid battery.",
+      "Battery storage (BESS) costs €200k–€500k/MWh, has fixed energy duration, and degrades with every cycle.",
+      "Flexible compute modulates load across infinite duration with zero cycle wear or chemical degradation.",
+      "Generates continuous baseline compute revenues while simultaneously earning high-value grid reserve payments.",
     ],
   },
 ];
@@ -374,14 +396,169 @@ export const businessModelStreams: BusinessStream[] = [
   },
 ];
 
+export const assetPortfolioData = {
+  tangible: {
+    title: "Tangible Physical Assets",
+    subtitle: "Koltrast Operating Infrastructure · Sweden",
+    items: [
+      {
+        title: "14 MW Live Power Capacity",
+        highlight: "Boden: 12 MW · Utansjö: 2 MW",
+        bullets: [
+          "Directly connected to the Swedish national grid (SE1 & SE2).",
+          "Powered by 100% fossil-free regional hydro and wind generation.",
+        ],
+      },
+      {
+        title: "18 Modular Data Centre Containers",
+        highlight: "Boden: 14 Units · Utansjö: 4 Units",
+        bullets: [
+          "Integrated airflow, power distribution, and climate systems.",
+          "Rapid modular architecture for scalable field deployment.",
+        ],
+      },
+      {
+        title: "5,384 Deployed Server Fleet",
+        highlight: "Boden: 4,405 · Utansjö: 979 Units",
+        bullets: [
+          "High-density server fleet operational 24/7 across Swedish facilities.",
+          "Integrated with edge telemetry for dynamic power load modulation.",
+        ],
+      },
+      {
+        title: "Industrial Campuses & Real Estate",
+        highlight: "Boden: 2,700 m² · Utansjö: 100 Ha",
+        bullets: [
+          "Boden: 2,700 m² secure fenced facility with repair workshop.",
+          "Utansjö: 100-hectare coastal campus with port + 30 MW expansion.",
+        ],
+      },
+    ],
+  },
+  intangible: {
+    title: "Intangible Assets & Software IP",
+    subtitle: "Flexionics Software & Accreditations · Swiss IP",
+    items: [
+      {
+        title: "100% In-House Software IP Suite",
+        highlight: "Zero Third-Party Dependencies",
+        bullets: [
+          "Proprietary Iceberg, Harbour, Compass, Northwatch, and Polaris.",
+          "Full source code transfer with zero software royalties or license fees.",
+        ],
+      },
+      {
+        title: "Chip-Level Control Firmware",
+        highlight: "Sub-Second (<0.7s) Load Ramping",
+        bullets: [
+          "Direct hardware-level control enabling sub-second power shedding.",
+          "Protects hardware longevity without computational data loss.",
+        ],
+      },
+      {
+        title: "Verified Svenska kraftnät Pre-Qualifications",
+        highlight: "Pure Response Times: FFR <1s · FCR-D 30s · mFRR 5–15m",
+        bullets: [
+          "Active: FCR-D (30s) and mFRR (5–15 min) pre-qualified & live.",
+          "Fast Frequency: FFR (<1s) qualified; FCR-N & aFRR in qualification testing.",
+        ],
+      },
+      {
+        title: "Commercial & Utility Settlement Frameworks",
+        highlight: "BRP / BSP Settlement Protocols",
+        bullets: [
+          "Established operational power purchase and netting utility agreements.",
+          "Automated audit reconciliation producing SvK-compliant settlement packages.",
+        ],
+      },
+    ],
+  },
+  summaryMetrics: [
+    { label: "Live Power", value: "14 MW" },
+    { label: "Containers", value: "18 Units" },
+    { label: "Server Fleet", value: "5,384 Units" },
+    { label: "Active Sites", value: "Boden & Utansjö" },
+    { label: "Planned Expansion", value: "30 MW (Utansjö)" },
+    { label: "Software IP", value: "100% In-House" },
+  ],
+};
+
+export const infrastructureSitesData = {
+  sites: [
+    {
+      id: "boden",
+      name: "Boden Hybrid Data Centre",
+      status: "Operational",
+      badgeColor: "emerald",
+      capacity: "12 MW Active Capacity",
+      zone: "Sweden SE1 (Norrbotten)",
+      bullets: [
+        "14 modular containers housing 4,405 servers running 24/7 compute.",
+        "Operational hybrid data centre active since 2018 with proven track record.",
+        "Swedish National Grid connection powered by 100% fossil-free hydro & wind.",
+        "Ambient air cooling, dedicated repair workshop, and secure perimeter.",
+        "Pre-qualified and actively generating grid revenue in FCR-D and mFRR.",
+      ],
+      specs: [
+        { label: "Active Power", value: "12 MW" },
+        { label: "Containers", value: "14 Units" },
+        { label: "Deployed Servers", value: "4,405" },
+        { label: "Grid Programs", value: "FCR-D, mFRR" },
+      ],
+    },
+    {
+      id: "utansjo",
+      name: "Utansjö Hybrid Data Centre",
+      status: "Operational",
+      badgeColor: "emerald",
+      capacity: "2 MW Active Capacity",
+      zone: "Sweden SE2 (Västernorrland)",
+      bullets: [
+        "4 modular containers housing 979 servers delivering balancing & compute.",
+        "Located on a 100-hectare industrial campus on the Härnösand coastline.",
+        "Swedish National Grid connection in SE2, Europe's lowest-cost bidding zone.",
+        "Deep-water maritime port access for heavy infrastructure delivery.",
+        "Pre-qualified and actively participating in mFRR and FFR markets.",
+      ],
+      specs: [
+        { label: "Active Power", value: "2 MW" },
+        { label: "Containers", value: "4 Units" },
+        { label: "Deployed Servers", value: "979" },
+        { label: "Grid Programs", value: "mFRR, FFR" },
+      ],
+    },
+    {
+      id: "utansjo-expansion",
+      name: "Utansjö Expansion Phase 1",
+      status: "Shovel-Ready",
+      badgeColor: "purple",
+      capacity: "30 MW Planned Expansion",
+      zone: "Sweden SE2 (Västernorrland)",
+      bullets: [
+        "Direct connection into heavy industrial substation with secured zoning rights.",
+        "Fully permitted industrial zone ready for high-density Neo-Cloud AI loads.",
+        "Advanced hybrid cooling leveraging ambient Scandinavian climate.",
+        "Compresses deployment timeline by 2+ years ahead of greenfield data centres.",
+        "Long-term site expansion potential scaling up to 150 MW on the campus.",
+      ],
+      specs: [
+        { label: "Planned Power", value: "30 MW" },
+        { label: "Grid Interface", value: "Heavy Substation" },
+        { label: "Site Area", value: "100 Hectares" },
+        { label: "Site Scalability", value: "Up to 150 MW" },
+      ],
+    },
+  ],
+};
+
 export const utansjoSiteData = {
   activeSite: {
     title: "Operational Facility (Utansjö Active)",
     capacity: "2.0 MW Active Capacity",
-    voltage: "20 kV Regional Interconnection",
+    voltage: "Regional Grid Connection",
     bullets: [
-      "Direct 20 kV regional grid interconnection supplying 2 MW continuous power.",
-      "Fully prequalified with Svenska kraftnät: FFR (1.1 MW) and mFRR Up+Down certified.",
+      "Direct Swedish National Grid interconnection supplying 2 MW continuous power.",
+      "Fully prequalified with Svenska kraftnät: FFR and mFRR certified.",
       "High-density compute server fleet actively operational and generating dual revenue.",
       "Modular containerized architecture with ambient coastal air cooling.",
       "Proven operational facility functioning as the Nordic engineering testbed.",
@@ -391,9 +568,9 @@ export const utansjoSiteData = {
   expansionSite: {
     title: "Phase 1 Expansion (Utansjö 30 MW)",
     capacity: "30.0 MW Planned Expansion",
-    voltage: "120 kV Heavy Industrial Substation",
+    voltage: "Heavy Industrial Substation",
     bullets: [
-      "Direct on-site access to existing 120 kV heavy industrial substation.",
+      "Direct on-site access to existing heavy industrial substation.",
       "Shovel-ready expansion tailored for high-density AI clusters and Neo-Cloud servers.",
       "Advanced hybrid cooling utilizing ambient coastal Scandinavian air temperatures.",
       "Secured heavy industrial zoning with adjacent maritime port and deep-water access.",
@@ -515,7 +692,7 @@ export const softwareModules: ModuleInfo[] = [
       "Performs automated preflight health checks and cryptographic state attestation before rollout.",
       "Supports automated instant rollback to preserve continuous high-availability operations.",
     ],
-    metrics: "342 Releases / Month · Cryptographic Attestation",
+    metrics: "342 Releases · Cryptographic Attestation",
   },
 ];
 
@@ -703,6 +880,103 @@ export const flexionicsTeam: TeamMember[] = [
   },
 ];
 
+export const jointTeamData = {
+  flexionics: [
+    {
+      name: "Bipin Patel",
+      role: "CEO & Founder",
+      company: "Flexionics" as const,
+      highlights: [
+        "Ex-Chief Risk Officer at HKEX Group overseeing systemic market risk.",
+        "Senior risk architect at Deutsche Bank and London Clearing House.",
+      ],
+    },
+    {
+      name: "Amy Shuai",
+      role: "Chief Financial Officer",
+      company: "Flexionics" as const,
+      highlights: [
+        "25+ years in global investment banking and M&A transaction structuring.",
+        "Former senior leadership roles at UBS, Deutsche Bank, and RBS.",
+      ],
+    },
+    {
+      name: "Appointed CTO",
+      role: "Chief Technology Officer",
+      company: "Flexionics" as const,
+      highlights: [
+        "Former Head of AI/ML at Tier-1 Global Investment Bank.",
+        "Architect of real-time distributed execution and decision engines.",
+      ],
+    },
+    {
+      name: "Giridhar Gandi",
+      role: "Head of Flexibility",
+      company: "Flexionics" as const,
+      highlights: [
+        "Former power systems engineer at Siemens Energy (VPPs & grid stability).",
+        "Architect of automated bidding algorithms and SvK pre-qualification.",
+      ],
+    },
+    {
+      name: "Umang Thakkar",
+      role: "Head of AI & Automation",
+      company: "Flexionics" as const,
+      highlights: [
+        "Lead architect of Iceberg Edge & Harbour orchestration systems.",
+        "AI product builder with 14+ deployed production platforms.",
+      ],
+    },
+  ],
+  koltrast: [
+    {
+      name: "Colin Chapple",
+      role: "Chief Engineer & Ops Director",
+      company: "Koltrast" as const,
+      highlights: [
+        "25+ years directing industrial power projects and substations.",
+        "Directs physical site engineering and Utansjö 30 MW expansion.",
+      ],
+    },
+    {
+      name: "Joel Roden",
+      role: "Senior HV Electrician",
+      company: "Koltrast" as const,
+      highlights: [
+        "Certified Swedish high-voltage electrical specialist.",
+        "Oversees daily switchgear, transformers, and electrical safety.",
+      ],
+    },
+    {
+      name: "Craig Taylor",
+      role: "Site Operations & Network Lead",
+      company: "Koltrast" as const,
+      highlights: [
+        "Manages multi-carrier network links, failover gateways, and cooling.",
+        "Directs modular container installations and physical reliability.",
+      ],
+    },
+    {
+      name: "Oskar Tullberg",
+      role: "Systems & Hardware Tech",
+      company: "Koltrast" as const,
+      highlights: [
+        "Maintains on-site edge hardware, server racks, and PDUs.",
+        "Executes scheduled diagnostic routines and continuous benchmarking.",
+      ],
+    },
+    {
+      name: "Vedran Klaic",
+      role: "Systems & Hardware Tech",
+      company: "Koltrast" as const,
+      highlights: [
+        "Conducts routine field inspections and physical equipment upkeep.",
+        "Monitors environmental telemetry and equipment reliability.",
+      ],
+    },
+  ],
+};
+
 export const transactionSummary = {
   acquirer: "Reikna AS (Stord, Norway)",
   targetEntities: "Flexionics Energy AG (Swiss Parent) & Koltrast Energy Solutions AB (Swedish Subsidiary)",
@@ -710,9 +984,9 @@ export const transactionSummary = {
     {
       title: "Physical Ground Layer (Koltrast)",
       bullets: [
-        "Utansjö 2 MW live operating compute facility connected at 20 kV in Sweden SE2.",
-        "Shovel-ready 30 MW Phase 1 industrial expansion with heavy 120 kV substation access.",
-        "Secured long-term industrial land rights with maritime deep-water port access.",
+        "14 MW live operating hybrid data centre capacity across Boden (12 MW) & Utansjö (2 MW).",
+        "18 modular containers housing 5,384 server miners across both Swedish facilities.",
+        "Shovel-ready 30 MW Phase 1 industrial expansion at Utansjö with heavy industrial substation access.",
       ],
     },
     {

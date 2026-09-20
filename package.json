@@ -1,7 +1,7 @@
 {
   "name": "reikna-pitch-deck",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Interactive investor pitch deck for the Flexionics & Koltrast Reikna AS acquisition",
   "author": "Flexionics <techsupport@flexionics.com>",
   "repository": {

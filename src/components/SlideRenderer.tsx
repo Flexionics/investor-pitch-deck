@@ -2,9 +2,12 @@ import React from "react";
 import {
   SlideData,
   thesisPoints,
+  flexionicsBusinessData,
   perimeterData,
   problemCards,
   businessModelStreams,
+  assetPortfolioData,
+  infrastructureSitesData,
   utansjoSiteData,
   trackRecordMetrics,
   softwareModules,
@@ -12,6 +15,7 @@ import {
   unitEconomicsData,
   koltrastTeam,
   flexionicsTeam,
+  jointTeamData,
   transactionSummary,
   deckMetadata,
 } from "../data/reiknaDeckContent";
@@ -26,6 +30,15 @@ import {
   Mail,
   Building2,
   Cpu,
+  Server,
+  Radio,
+  Layers,
+  Activity,
+  ArrowRight,
+  Database,
+  Gauge,
+  Check,
+  Clock,
 } from "lucide-react";
 
 interface SlideRendererProps {
@@ -54,7 +67,7 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
                 <span className="text-4xl font-black text-[#6b21a8] tracking-tight uppercase">
                   FLEXIONICS
                 </span>
-                <span className="text-slate-300 font-light text-3xl mx-2">/</span>
+                <span className="text-slate-400 font-bold text-2xl mx-2">✕</span>
                 <span className="text-4xl font-black text-[#047857] tracking-tight uppercase">
                   KOLTRAST
                 </span>
@@ -81,22 +94,22 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
                   Transforming Compute Infrastructure Into High-Value <span className="text-[#6b21a8]">Grid Flexibility</span>
                 </h1>
                 <p className="text-xl text-slate-600 leading-relaxed font-normal mb-6 max-w-2xl">
-                  European Neo-Cloud Infrastructure: Turnkey Nordic Grid-Flexibility Platform &amp; 32 MW Utansjö Industrial Compute Asset ready for immediate integration into Reikna's growth roadmap.
+                  European Neo-Cloud Infrastructure: Turnkey Nordic Grid-Flexibility Platform &amp; 14 MW Operating Infrastructure (Boden &amp; Utansjö) + 30 MW Expansion ready for immediate integration into Reikna's growth roadmap.
                 </p>
 
                 {/* Key Strategic Metrics Strip */}
                 <div className="flex items-center gap-4">
                   <div className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl">
-                    <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Site Potential</p>
-                    <p className="text-lg font-black text-[#047857]">32 MW (Sweden SE2)</p>
+                    <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Operating Fleet</p>
+                    <p className="text-lg font-black text-[#047857]">14 MW Live (SE1 &amp; SE2)</p>
+                  </div>
+                  <div className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl">
+                    <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Planned Expansion</p>
+                    <p className="text-lg font-black text-purple-700">30 MW Shovel-Ready</p>
                   </div>
                   <div className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl">
                     <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Software Platform</p>
                     <p className="text-lg font-black text-[#6b21a8]">100% Proprietary IP</p>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl">
-                    <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Production Track Record</p>
-                    <p className="text-lg font-black text-slate-900">&gt; $6M Revenue</p>
                   </div>
                 </div>
               </div>
@@ -131,11 +144,11 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
                       <ul className="space-y-1.5 text-sm text-slate-700 leading-snug">
                         <li className="flex items-start gap-2">
                           <span className="text-[#047857] font-bold shrink-0">•</span>
-                          <span><strong className="text-slate-900">32 MW Utansjö Site:</strong> 2 MW operational + 30 MW Phase 1 expansion</span>
+                          <span><strong className="text-slate-900">14 MW Operating Sites:</strong> Boden (12 MW, SE1) &amp; Utansjö (2 MW, SE2)</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-[#047857] font-bold shrink-0">•</span>
-                          <span><strong className="text-slate-900">Heavy Grid Interconnect:</strong> Direct 120 kV substation in Sweden SE2</span>
+                          <span><strong className="text-slate-900">30 MW Expansion:</strong> Shovel-ready Phase 1 at Utansjö with heavy substation</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="text-[#047857] font-bold shrink-0">•</span>
@@ -155,7 +168,7 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
                           Software IP Layer
                         </span>
                       </div>
-                      <ul className="space-y-1.5 text-sm text-slate-700 leading-snug">
+                      <ul className="space-y-2 text-sm text-slate-700 leading-snug">
                         <li className="flex items-start gap-2">
                           <span className="text-[#6b21a8] font-bold shrink-0">•</span>
                           <span><strong className="text-slate-900">100% In-House Software:</strong> Iceberg, Harbour, Compass, Northwatch, Polaris</span>
@@ -163,10 +176,6 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
                         <li className="flex items-start gap-2">
                           <span className="text-[#6b21a8] font-bold shrink-0">•</span>
                           <span><strong className="text-slate-900">SvK Prequalified:</strong> Active Fast Frequency (FFR) &amp; mFRR certifications</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-[#6b21a8] font-bold shrink-0">•</span>
-                          <span><strong className="text-slate-900">Quant Leadership:</strong> Tier-1 market risk architects &amp; energy quant team</span>
                         </li>
                       </ul>
                     </div>
@@ -189,8 +198,8 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
                 <p className="text-xs font-bold uppercase tracking-widest text-[#047857] mb-1">
                   Physical Ground Asset (Koltrast)
                 </p>
-                <p className="text-2xl font-black text-slate-900">32 MW Utansjö Site</p>
-                <p className="text-sm text-slate-600 mt-1 font-medium">2 MW Operational + 30 MW Phase 1 Expansion (120 kV)</p>
+                <p className="text-2xl font-black text-slate-900">14 MW Live + 30 MW Exp.</p>
+                <p className="text-sm text-slate-600 mt-1 font-medium">Boden (12 MW) &amp; Utansjö (2 MW Live + 30 MW Shovel-Ready)</p>
               </div>
 
               <div className="inst-card p-4.5 bg-slate-50/80 border-slate-200">
@@ -253,8 +262,9 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
       );
 
     /* ══════════════════════════════════════════════════════
-       SLIDE 03: TRANSACTION PERIMETER (NATURAL FLOW, MY-AUTO CENTERED)
+       SLIDE 03: THE FLEXIONICS BUSINESS (WHAT WE DO & HOW WE DO IT)
        ══════════════════════════════════════════════════════ */
+    case "flexionics_business":
     case "perimeter":
       return (
         <SlideLayout
@@ -264,82 +274,96 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
           title={slide.title}
           subtitle={slide.subtitle}
         >
-          <div className="grid grid-cols-2 gap-7 my-auto py-2">
-            {/* Koltrast Card */}
-            <div className="inst-card p-7 border-t-4 border-t-[#047857] flex flex-col">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#047857] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
-                  Swedish Operating Subsidiary
-                </span>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Ground Layer</span>
-              </div>
-              <h3 className="text-3xl font-black text-slate-900 mb-0.5">{perimeterData.koltrast.title}</h3>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-5">
-                Physical Infrastructure · Grid Contracts · Substation Rights
-              </p>
+          <div className="flex flex-col justify-center h-full gap-6 py-2">
+            {/* Top Row: 3 Pillars (What We Do) */}
+            <div className="grid grid-cols-3 gap-6">
+              {flexionicsBusinessData.pillars.map((pillar, idx) => (
+                <div
+                  key={idx}
+                  className={`inst-card p-7 flex flex-col justify-between border-t-4 ${
+                    idx === 0
+                      ? "border-t-[#047857]"
+                      : idx === 1
+                      ? "border-t-[#6b21a8]"
+                      : "border-t-blue-700"
+                  }`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2.5">
+                      <span
+                        className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${
+                          idx === 0
+                            ? "text-[#047857] bg-emerald-50 border-emerald-200"
+                            : idx === 1
+                            ? "text-[#6b21a8] bg-purple-50 border-purple-200"
+                            : "text-blue-700 bg-blue-50 border-blue-200"
+                        }`}
+                      >
+                        {pillar.badge}
+                      </span>
+                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                        {pillar.sub}
+                      </span>
+                    </div>
 
-              <div className="space-y-3.5 mb-6">
-                {perimeterData.koltrast.points.map((pt, i) => (
-                  <div key={i} className="flex items-start gap-3 text-base text-slate-700 leading-snug">
-                    <div className="w-4 h-4 rounded-full bg-emerald-100 text-[#047857] flex items-center justify-center text-[10px] font-bold shrink-0 mt-1">
-                      ✓
-                    </div>
-                    <div>
-                      <strong className="text-slate-900 font-bold">{pt.title}:</strong>{" "}
-                      <span className="text-slate-600">{pt.desc}</span>
-                    </div>
+                    <h3 className="text-2xl font-black text-slate-900 mb-2">
+                      {pillar.title}
+                    </h3>
+
+                    <p className="text-base text-slate-600 leading-relaxed mb-4">
+                      {pillar.desc}
+                    </p>
+
+                    <ul className="space-y-2.5">
+                      {pillar.bullets.map((b, bIdx) => (
+                        <li key={bIdx} className="text-base text-slate-700 leading-normal flex items-start gap-2.5">
+                          <span
+                            className={`font-bold shrink-0 mt-0.5 ${
+                              idx === 0
+                                ? "text-[#047857]"
+                                : idx === 1
+                                ? "text-[#6b21a8]"
+                                : "text-blue-700"
+                            }`}
+                          >
+                            •
+                          </span>
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
-              </div>
-
-              <div className="mt-auto pt-3.5 border-t border-slate-100 bg-slate-50 -mx-7 -mb-7 p-4.5 rounded-b-xl flex items-center justify-between">
-                <div>
-                  <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Primary Asset</p>
-                  <p className="text-sm font-bold text-slate-900">Utansjö 2 MW Live + 30 MW Phase 1 Expansion</p>
                 </div>
-                <div className="text-right">
-                  <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Grid Interconnect</p>
-                  <p className="text-sm font-bold text-[#047857] font-mono">120 kV Heavy Substation</p>
-                </div>
-              </div>
+              ))}
             </div>
 
-            {/* Flexionics Card */}
-            <div className="inst-card p-7 border-t-4 border-t-[#6b21a8] flex flex-col">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#6b21a8] bg-purple-50 px-3.5 py-1 rounded-full border border-purple-200">
-                  Swiss Parent Entity
+            {/* Bottom Row: 4-Stage Operational Pipeline (How We Do It) */}
+            <div className="inst-card p-5 bg-slate-50 border border-slate-200 rounded-xl shrink-0">
+              <div className="flex items-center justify-between mb-3 pb-2.5 border-b border-slate-200">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-4 h-4 text-[#6b21a8]" />
+                  <span className="text-sm font-bold uppercase tracking-wider text-slate-900">
+                    How We Do It: The End-to-End Operational Pipeline
+                  </span>
+                </div>
+                <span className="text-xs font-bold text-[#047857] uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded border border-emerald-200">
+                  Full-Stack Execution Engine
                 </span>
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Software Layer</span>
               </div>
-              <h3 className="text-3xl font-black text-slate-900 mb-0.5">{perimeterData.flexionics.title}</h3>
-              <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-5">
-                100% In-House Software IP · Quant Models · SvK Prequalifications
-              </p>
 
-              <div className="space-y-3.5 mb-6">
-                {perimeterData.flexionics.points.map((pt, i) => (
-                  <div key={i} className="flex items-start gap-3 text-base text-slate-700 leading-snug">
-                    <div className="w-4 h-4 rounded-full bg-purple-100 text-[#6b21a8] flex items-center justify-center text-[10px] font-bold shrink-0 mt-1">
-                      ✓
+              <div className="grid grid-cols-4 gap-4">
+                {flexionicsBusinessData.pipeline.map((step, idx) => (
+                  <div key={idx} className="p-3.5 bg-white border border-slate-200 rounded-lg shadow-xs">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs font-mono font-black text-[#6b21a8] bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
+                        {step.step}
+                      </span>
+                      <span className="text-sm font-black text-slate-900">{step.title}</span>
                     </div>
-                    <div>
-                      <strong className="text-slate-900 font-bold">{pt.title}:</strong>{" "}
-                      <span className="text-slate-600">{pt.desc}</span>
-                    </div>
+                    <p className="text-sm font-bold text-slate-800 mb-1">{step.desc}</p>
+                    <p className="text-xs text-slate-600 leading-relaxed">{step.detail}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-auto pt-3.5 border-t border-slate-100 bg-slate-50 -mx-7 -mb-7 p-4.5 rounded-b-xl flex items-center justify-between">
-                <div>
-                  <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Software Stack</p>
-                  <p className="text-sm font-bold text-slate-900">Iceberg, Harbour, Compass, Northwatch, Polaris</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">Market Prequalifications</p>
-                  <p className="text-sm font-bold text-[#6b21a8] font-mono">Svenska kraftnät FFR / mFRR</p>
-                </div>
               </div>
             </div>
           </div>
@@ -478,8 +502,130 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
       );
 
     /* ══════════════════════════════════════════════════════
-       SLIDE 06: UTANSJÖ SITE ASSET (PRECISE SPECS & BULLETS)
+       SLIDE 06: TANGIBLE & INTANGIBLE ASSET PORTFOLIO
        ══════════════════════════════════════════════════════ */
+    case "assets_portfolio":
+      return (
+        <SlideLayout
+          category={slide.category}
+          slideNumber={slide.slideNumber}
+          totalSlides={totalSlides}
+          title={slide.title}
+          subtitle={slide.subtitle}
+        >
+          <div className="flex flex-col justify-center h-full gap-6 py-2">
+            {/* 2-Column Comparative Matrix: Tangible vs Intangible */}
+            <div className="grid grid-cols-2 gap-7">
+              {/* Left Column: Tangible Physical Assets */}
+              <div className="inst-card p-6 border-t-4 border-t-[#047857] flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#047857] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
+                      Tangible Assets
+                    </span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                      Boden &amp; Utansjö · Sweden
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-black text-slate-900 mb-0.5">
+                    {assetPortfolioData.tangible.title}
+                  </h3>
+                  <p className="text-xs font-bold text-[#047857] uppercase tracking-wider mb-4">
+                    {assetPortfolioData.tangible.subtitle}
+                  </p>
+
+                  <div className="space-y-3">
+                    {assetPortfolioData.tangible.items.map((item, idx) => (
+                      <div key={idx} className="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                        <div className="flex items-center justify-between mb-1.5">
+                          <span className="text-base font-black text-slate-900">{item.title}</span>
+                          <span className="text-xs font-bold font-mono text-[#047857] bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">
+                            {item.highlight}
+                          </span>
+                        </div>
+                        <ul className="space-y-1">
+                          {item.bullets.map((b, bIdx) => (
+                            <li key={bIdx} className="text-sm text-slate-700 leading-relaxed flex items-start gap-2">
+                              <span className="text-[#047857] font-bold shrink-0">•</span>
+                              <span>{b}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 uppercase">
+                  <span>Physical Infrastructure Footprint</span>
+                  <span className="text-sm font-bold text-[#047857] font-mono">14 MW Active · 18 Containers</span>
+                </div>
+              </div>
+
+              {/* Right Column: Intangible Assets & Software IP */}
+              <div className="inst-card p-6 border-t-4 border-t-[#6b21a8] flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#6b21a8] bg-purple-50 px-3.5 py-1 rounded-full border border-purple-200">
+                      Intangible Assets
+                    </span>
+                    <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                      100% In-House Software IP
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-black text-slate-900 mb-0.5">
+                    {assetPortfolioData.intangible.title}
+                  </h3>
+                  <p className="text-xs font-bold text-[#6b21a8] uppercase tracking-wider mb-4">
+                    {assetPortfolioData.intangible.subtitle}
+                  </p>
+
+                  <div className="space-y-3">
+                    {assetPortfolioData.intangible.items.map((item, idx) => (
+                      <div key={idx} className="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl">
+                        <div className="flex items-center justify-between mb-1.5">
+                          <span className="text-base font-black text-slate-900">{item.title}</span>
+                          <span className="text-xs font-bold font-mono text-[#6b21a8] bg-purple-50 px-2.5 py-0.5 rounded border border-purple-200">
+                            {item.highlight}
+                          </span>
+                        </div>
+                        <ul className="space-y-1">
+                          {item.bullets.map((b, bIdx) => (
+                            <li key={bIdx} className="text-sm text-slate-700 leading-relaxed flex items-start gap-2">
+                              <span className="text-[#6b21a8] font-bold shrink-0">•</span>
+                              <span>{b}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 uppercase">
+                  <span>Regulatory Pre-Qualifications</span>
+                  <span className="text-sm font-bold text-[#6b21a8] font-mono">FFR (&lt;1s) · FCR-D (30s) · mFRR (5-15m)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom 6-Metric Strip */}
+            <div className="inst-card p-3.5 bg-slate-50 border border-slate-200 grid grid-cols-6 gap-3 rounded-xl shrink-0">
+              {assetPortfolioData.summaryMetrics.map((item, i) => (
+                <div key={i} className="px-3 border-r border-slate-200 last:border-r-0">
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">{item.label}</p>
+                  <p className="text-lg font-black text-slate-900 mt-0.5 font-mono">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </SlideLayout>
+      );
+
+    /* ══════════════════════════════════════════════════════
+       SLIDE 07: INFRASTRUCTURE SITES (BODEN & UTANSJÖ)
+       ══════════════════════════════════════════════════════ */
+    case "infrastructure_sites":
     case "utansjo_asset":
       return (
         <SlideLayout
@@ -490,77 +636,81 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
           subtitle={slide.subtitle}
         >
           <div className="flex flex-col justify-center h-full gap-6 py-2">
-            {/* 2-Column Comparative Matrix */}
-            <div className="grid grid-cols-2 gap-7">
-              {/* Active Facility */}
-              <div className="inst-card p-7 border-t-4 border-t-[#047857] flex flex-col">
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#047857] bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
-                      Live Operational
-                    </span>
-                    <span className="text-sm font-mono font-bold text-slate-500">SE2 · Sweden</span>
+            {/* 3-Column Comparative Site Matrix */}
+            <div className="grid grid-cols-3 gap-6">
+              {infrastructureSitesData.sites.map((site, idx) => (
+                <div
+                  key={idx}
+                  className={`inst-card p-6 flex flex-col justify-between border-t-4 ${
+                    site.badgeColor === "purple" ? "border-t-[#6b21a8]" : "border-t-[#047857]"
+                  }`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span
+                        className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border ${
+                          site.badgeColor === "purple"
+                            ? "text-[#6b21a8] bg-purple-50 border-purple-200"
+                            : "text-[#047857] bg-emerald-50 border-emerald-200"
+                        }`}
+                      >
+                        {site.status}
+                      </span>
+                      <span className="text-xs font-mono font-bold text-slate-500">{site.zone}</span>
+                    </div>
+
+                    <h3 className="text-2xl font-black text-slate-900 mb-0.5">{site.name}</h3>
+                    <p
+                      className={`text-sm font-bold uppercase tracking-wider mb-3.5 ${
+                        site.badgeColor === "purple" ? "text-[#6b21a8]" : "text-[#047857]"
+                      }`}
+                    >
+                      {site.capacity}
+                    </p>
+
+                    <ul className="space-y-2 mb-4">
+                      {site.bullets.map((b, bIdx) => (
+                        <li key={bIdx} className="text-sm text-slate-700 leading-relaxed flex items-start gap-2.5">
+                          <span
+                            className={`font-bold shrink-0 mt-0.5 ${
+                              site.badgeColor === "purple" ? "text-[#6b21a8]" : "text-[#047857]"
+                            }`}
+                          >
+                            •
+                          </span>
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-0.5">{utansjoSiteData.activeSite.title}</h3>
-                  <p className="text-sm font-bold text-[#047857] uppercase tracking-wider mb-4">
-                    {utansjoSiteData.activeSite.capacity} · {utansjoSiteData.activeSite.voltage}
-                  </p>
 
-                  <ul className="space-y-3 mb-4">
-                    {utansjoSiteData.activeSite.bullets.map((b, bIdx) => (
-                      <li key={bIdx} className="text-base text-slate-700 leading-relaxed flex items-start gap-2.5">
-                        <span className="text-[#047857] font-bold shrink-0 mt-0.5">•</span>
-                        <span>{b}</span>
-                      </li>
+                  {/* Site Specs Grid */}
+                  <div className="pt-3.5 border-t border-slate-100 bg-slate-50 -mx-6 -mb-6 p-3.5 rounded-b-xl grid grid-cols-2 gap-2">
+                    {site.specs.map((sp, sIdx) => (
+                      <div key={sIdx}>
+                        <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{sp.label}</p>
+                        <p className="text-sm font-black text-slate-900 font-mono mt-0.5">{sp.value}</p>
+                      </div>
                     ))}
-                  </ul>
-                </div>
-
-                <div className="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between text-sm text-slate-500 font-semibold">
-                  <span>Power Delivery: Swedish National Grid</span>
-                  <span className="text-[#047857] font-bold font-mono">Status: {utansjoSiteData.activeSite.status}</span>
-                </div>
-              </div>
-
-              {/* 30 MW Expansion Phase 1 */}
-              <div className="inst-card p-7 border-t-4 border-t-[#6b21a8] flex flex-col">
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#6b21a8] bg-purple-50 px-3.5 py-1 rounded-full border border-purple-200">
-                      Phase 1 Expansion
-                    </span>
-                    <span className="text-sm font-mono font-bold text-[#6b21a8]">Heavy Substation</span>
                   </div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-0.5">{utansjoSiteData.expansionSite.title}</h3>
-                  <p className="text-sm font-bold text-[#6b21a8] uppercase tracking-wider mb-4">
-                    {utansjoSiteData.expansionSite.capacity} · {utansjoSiteData.expansionSite.voltage}
-                  </p>
-
-                  <ul className="space-y-3 mb-4">
-                    {utansjoSiteData.expansionSite.bullets.map((b, bIdx) => (
-                      <li key={bIdx} className="text-base text-slate-700 leading-relaxed flex items-start gap-2.5">
-                        <span className="text-[#6b21a8] font-bold shrink-0 mt-0.5">•</span>
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between text-sm text-slate-500 font-semibold">
-                  <span>Development: Zoned Industrial Land</span>
-                  <span className="text-[#6b21a8] font-bold font-mono">Status: {utansjoSiteData.expansionSite.status}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom 4-Item Location & Infrastructure Specs */}
-            <div className="inst-card p-4.5 bg-slate-50 border border-slate-200 grid grid-cols-4 gap-4 rounded-xl shrink-0">
-              {utansjoSiteData.locationDetails.map((item, i) => (
-                <div key={i} className="px-3">
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">{item.label}</p>
-                  <p className="text-sm font-bold text-slate-900 mt-1">{item.value}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Bottom Anchor Banner */}
+            <div className="inst-card p-4.5 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between shrink-0">
+              <div className="flex items-center gap-3">
+                <Building2 className="w-5 h-5 text-[#047857] shrink-0" />
+                <p className="text-sm font-bold text-slate-900">
+                  Combined Swedish Industrial Footprint:{" "}
+                  <span className="text-slate-600 font-normal">
+                    14 MW operational hybrid data centre capacity across 18 containers in Boden and Utansjö, supplemented by a shovel-ready 30 MW expansion on the Swedish national grid.
+                  </span>
+                </p>
+              </div>
+              <span className="text-xs font-bold text-[#047857] uppercase tracking-wider bg-emerald-100/70 px-3.5 py-1 rounded-full shrink-0 border border-emerald-200">
+                14 MW Live + 30 MW Shovel-Ready
+              </span>
             </div>
           </div>
         </SlideLayout>
@@ -828,8 +978,10 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
       );
 
     /* ══════════════════════════════════════════════════════
-       SLIDE 11: TEAM KOLTRAST (3 + 2 BALANCED LAYOUT, CLEAN BIOS)
+       SLIDE 12: JOINT TEAM (FLEXIONICS & KOLTRAST - 5 + 5 GRID)
        ══════════════════════════════════════════════════════ */
+    case "team_joint":
+    case "team_flexionics":
     case "team_koltrast":
       return (
         <SlideLayout
@@ -839,142 +991,102 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
           title={slide.title}
           subtitle={slide.subtitle}
         >
-          <div className="flex flex-col justify-center h-full gap-6 py-2">
-            {/* Top Row: 3 Leaders (Colin Chapple, Joel Roden, Craig Taylor) */}
-            <div className="grid grid-cols-3 gap-6">
-              {koltrastTeam.slice(0, 3).map((member, idx) => (
-                <div key={idx} className="inst-card p-7 flex flex-col justify-between border-t-4 border-t-[#047857]">
-                  <div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-1">{member.name}</h3>
-                    <div className="mb-3.5">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#047857] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 inline-block">
-                        {member.role}
-                      </span>
-                    </div>
-                    <ul className="space-y-2.5">
-                      {member.highlights.map((pt, j) => (
-                        <li key={j} className="text-[14.5px] text-slate-700 leading-relaxed flex items-start gap-2.5">
-                          <span className="text-[#047857] font-bold text-base leading-none shrink-0 mt-0.5">•</span>
-                          <span>{pt}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          <div className="flex flex-col justify-between h-full py-1 gap-3.5">
+            {/* Row 1: Flexionics Software & Financial Architecture (5 Cols) */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#6b21a8] bg-purple-50 px-3 py-0.5 rounded-full border border-purple-200">
+                    Flexionics Leadership &amp; Core Engineering
+                  </span>
+                  <span className="text-sm text-slate-600 font-medium">
+                    Software IP, Algorithmic Energy Trading, AI &amp; Capital Markets
+                  </span>
                 </div>
-              ))}
+                <span className="text-xs font-mono font-bold text-[#6b21a8]">Zug, Switzerland</span>
+              </div>
+
+              <div className="grid grid-cols-5 gap-3.5">
+                {jointTeamData.flexionics.map((member, idx) => (
+                  <div
+                    key={idx}
+                    className="inst-card p-3.5 flex flex-col justify-between border-t-4 border-t-[#6b21a8] bg-white shadow-xs"
+                  >
+                    <div>
+                      <h4 className="text-[15.5px] font-black text-slate-900 leading-tight mb-1">
+                        {member.name}
+                      </h4>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#6b21a8] mb-2 leading-tight">
+                        {member.role}
+                      </p>
+                      <ul className="space-y-1.5">
+                        {member.highlights.map((pt, j) => (
+                          <li key={j} className="text-[13px] text-slate-700 leading-snug flex items-start gap-1.5">
+                            <span className="text-[#6b21a8] font-bold text-xs shrink-0 leading-none mt-0.5">•</span>
+                            <span>{pt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Bottom Row: 2 Specialists Centered (Oskar Tullberg, Vedran Klaic) */}
-            <div className="grid grid-cols-2 gap-6 max-w-[1190px] mx-auto w-full">
-              {koltrastTeam.slice(3, 5).map((member, idx) => (
-                <div key={idx} className="inst-card p-7 flex flex-col justify-between border-t-4 border-t-[#047857]">
-                  <div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-1">{member.name}</h3>
-                    <div className="mb-3.5">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#047857] bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 inline-block">
-                        {member.role}
-                      </span>
-                    </div>
-                    <ul className="space-y-2.5">
-                      {member.highlights.map((pt, j) => (
-                        <li key={j} className="text-[14.5px] text-slate-700 leading-relaxed flex items-start gap-2.5">
-                          <span className="text-[#047857] font-bold text-base leading-none shrink-0 mt-0.5">•</span>
-                          <span>{pt}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+            {/* Row 2: Koltrast Nordic Power & Infrastructure Operations (5 Cols) */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#047857] bg-emerald-50 px-3 py-0.5 rounded-full border border-emerald-200">
+                    Koltrast Nordic Infrastructure &amp; Site Operations
+                  </span>
+                  <span className="text-sm text-slate-600 font-medium">
+                    High-Voltage Grid Engineering, Substation Works &amp; On-Site Technicians
+                  </span>
                 </div>
-              ))}
+                <span className="text-xs font-mono font-bold text-[#047857]">Sweden (SE1 &amp; SE2)</span>
+              </div>
+
+              <div className="grid grid-cols-5 gap-3.5">
+                {jointTeamData.koltrast.map((member, idx) => (
+                  <div
+                    key={idx}
+                    className="inst-card p-3.5 flex flex-col justify-between border-t-4 border-t-[#047857] bg-white shadow-xs"
+                  >
+                    <div>
+                      <h4 className="text-[15.5px] font-black text-slate-900 leading-tight mb-1">
+                        {member.name}
+                      </h4>
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#047857] mb-2 leading-tight">
+                        {member.role}
+                      </p>
+                      <ul className="space-y-1.5">
+                        {member.highlights.map((pt, j) => (
+                          <li key={j} className="text-[13px] text-slate-700 leading-snug flex items-start gap-1.5">
+                            <span className="text-[#047857] font-bold text-xs shrink-0 leading-none mt-0.5">•</span>
+                            <span>{pt}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Grounding Bottom Anchor Banner */}
-            <div className="inst-card p-4.5 px-6 bg-slate-50 border border-emerald-200 rounded-xl flex items-center justify-between shadow-sm shrink-0">
+            {/* Bottom Grounding Anchor Banner */}
+            <div className="inst-card p-3.5 px-5 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between shadow-sm shrink-0">
               <div className="flex items-center gap-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#047857] animate-pulse shrink-0" />
                 <p className="text-sm font-bold text-slate-900">
-                  Turnkey Nordic Execution Capability: <span className="text-slate-600 font-normal">Licensed high-voltage electricians, substation specialists, and hardware technicians active on-site in Sweden with zero recruitment lag.</span>
+                  Turnkey Execution Capability:{" "}
+                  <span className="text-slate-600 font-normal">
+                    Seamless synthesis of Tier-1 financial risk management (HKEX, Deutsche Bank), energy quant modeling (Siemens Energy), and certified on-the-ground Swedish high-voltage engineering.
+                  </span>
                 </p>
               </div>
               <span className="text-xs font-bold text-[#047857] uppercase tracking-wider bg-emerald-100/70 px-3.5 py-1 rounded-full shrink-0 border border-emerald-200">
-                On-Site Fleet Ready
-              </span>
-            </div>
-          </div>
-        </SlideLayout>
-      );
-
-    /* ══════════════════════════════════════════════════════
-       SLIDE 12: TEAM FLEXIONICS (3 + 2 BALANCED LAYOUT, CLEAN BIOS)
-       ══════════════════════════════════════════════════════ */
-    case "team_flexionics":
-      return (
-        <SlideLayout
-          category={slide.category}
-          slideNumber={slide.slideNumber}
-          totalSlides={totalSlides}
-          title={slide.title}
-          subtitle={slide.subtitle}
-        >
-          <div className="flex flex-col justify-center h-full gap-6 py-2">
-            {/* Top Row: 3 Executive Leaders (Bipin Patel, Amy Shuai, CTO) */}
-            <div className="grid grid-cols-3 gap-6">
-              {flexionicsTeam.slice(0, 3).map((member, idx) => (
-                <div key={idx} className="inst-card p-7 flex flex-col justify-between border-t-4 border-t-[#6b21a8]">
-                  <div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-1">{member.name}</h3>
-                    <div className="mb-3.5">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#6b21a8] bg-purple-50 px-3 py-1 rounded-full border border-purple-200 inline-block">
-                        {member.role}
-                      </span>
-                    </div>
-                    <ul className="space-y-2.5">
-                      {member.highlights.map((pt, j) => (
-                        <li key={j} className="text-[14.5px] text-slate-700 leading-relaxed flex items-start gap-2.5">
-                          <span className="text-[#6b21a8] font-bold text-base leading-none shrink-0 mt-0.5">•</span>
-                          <span>{pt}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Bottom Row: 2 Technical Principals Centered (Giridhar Gandi, Umang Thakkar) */}
-            <div className="grid grid-cols-2 gap-6 max-w-[1190px] mx-auto w-full">
-              {flexionicsTeam.slice(3, 5).map((member, idx) => (
-                <div key={idx} className="inst-card p-7 flex flex-col justify-between border-t-4 border-t-[#6b21a8]">
-                  <div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-1">{member.name}</h3>
-                    <div className="mb-3.5">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#6b21a8] bg-purple-50 px-3 py-1 rounded-full border border-purple-200 inline-block">
-                        {member.role}
-                      </span>
-                    </div>
-                    <ul className="space-y-2.5">
-                      {member.highlights.map((pt, j) => (
-                        <li key={j} className="text-[14.5px] text-slate-700 leading-relaxed flex items-start gap-2.5">
-                          <span className="text-[#6b21a8] font-bold text-base leading-none shrink-0 mt-0.5">•</span>
-                          <span>{pt}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Grounding Bottom Anchor Banner */}
-            <div className="inst-card p-4.5 px-6 bg-slate-50 border border-purple-200 rounded-xl flex items-center justify-between shadow-sm shrink-0">
-              <div className="flex items-center gap-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-[#6b21a8] animate-pulse shrink-0" />
-                <p className="text-sm font-bold text-slate-900">
-                  Cross-Disciplinary Leadership: <span className="text-slate-600 font-normal">Combining Tier-1 financial risk architecture (HKEX, Deutsche Bank), energy quant modeling (Siemens Energy), and production AI engineering (Iceberg Edge &amp; Harbour).</span>
-                </p>
-              </div>
-              <span className="text-xs font-bold text-[#6b21a8] uppercase tracking-wider bg-purple-100/70 px-3.5 py-1 rounded-full shrink-0 border border-purple-200">
-                Immediate Integration
+                10-Member Joint Operating Unit
               </span>
             </div>
           </div>
@@ -1021,7 +1133,7 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
               <div className="mt-5 pt-3.5 border-t border-slate-100 bg-slate-50 -mx-7 -mb-7 p-4.5 rounded-b-xl flex items-center justify-between">
                 <div>
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Perimeter Scope</p>
-                  <p className="text-sm font-bold text-slate-900">Physical Nordic Site + 100% Software IP</p>
+                  <p className="text-sm font-bold text-slate-900">14 MW Live Sites (Boden &amp; Utansjö) + 100% Software IP</p>
                 </div>
                 <div className="text-right">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Operating Jurisdiction</p>

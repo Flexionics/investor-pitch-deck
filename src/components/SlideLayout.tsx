@@ -30,7 +30,7 @@ export const SlideLayout: React.FC<SlideLayoutProps> = ({
             <span className="font-black text-[#6b21a8] tracking-tight text-2xl uppercase">
               FLEXIONICS
             </span>
-            <span className="text-slate-300 font-light text-2xl">/</span>
+            <span className="text-slate-400 font-bold text-xl">✕</span>
             <span className="font-black text-[#047857] tracking-tight text-2xl uppercase">
               KOLTRAST
             </span>
