@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #0f172a;
+    background-color: #030712;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* 16:9 Slide Canvas Lock */
+.slide-canvas {
+  width: 1920px;
+  height: 1080px;
+  min-width: 1920px;
+  min-height: 1080px;
+  max-width: 1920px;
+  max-height: 1080px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* Subtle dot grid for institutional background */
+.bg-institutional-grid {
+  background-image: radial-gradient(#e2e8f0 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+}
+
+/* High contrast glass cards */
+.inst-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+.inst-card-highlight {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1.5px solid #cbd5e1;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.06);
+}
+
+/* PDF Print Export Formatting */
+@media print {
+  @page {
+    size: 1920px 1080px;
+    margin: 0;
+  }
+
+  html, body {
+    width: 1920px !important;
+    height: 1080px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    width: 1920px !important;
+    height: 1080px !important;
+    max-width: 1920px !important;
+    max-height: 1080px !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    display: flex !important;
+    overflow: hidden !important;
+  }
+
+  .print-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+}

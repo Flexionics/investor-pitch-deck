@@ -1,0 +1,38 @@
+{
+  "name": "reikna-pitch-deck",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Interactive investor pitch deck for the Flexionics & Koltrast Reikna AS acquisition",
+  "author": "Flexionics <techsupport@flexionics.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Flexionics/investor-pitch-deck.git"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5180",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "export:pdf": "node scripts/export-8k-pdf.mjs",
+    "export:pdf:8k": "node scripts/export-8k-pdf.mjs --scale=4",
+    "export:pdf:4k": "node scripts/export-8k-pdf.mjs --scale=2"
+  },
+  "dependencies": {
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.0",
+    "playwright": "^1.63.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.0"
+  }
+}
