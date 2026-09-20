@@ -176,7 +176,7 @@ export const slides: SlideData[] = [
     slideNumber: 12,
     category: "People & Leadership",
     title: "Joint Leadership & Engineering Team: Flexionics & Koltrast",
-    subtitle: "Tier-1 financial market risk architects, energy quant specialists, and certified Swedish high-voltage engineering operators",
+    subtitle: "Tier-1 financial market risk architects, AI & software engineers, and certified Swedish high-voltage engineering operators",
     layout: "team_joint",
   },
   {
@@ -884,7 +884,9 @@ export const jointTeamData = {
   flexionics: [
     {
       name: "Bipin Patel",
+      initials: "BP",
       role: "CEO & Founder",
+      badge: "Ex-CRO HKEX • Deutsche Bank",
       company: "Flexionics" as const,
       highlights: [
         "Ex-Chief Risk Officer at HKEX Group overseeing systemic market risk.",
@@ -893,7 +895,9 @@ export const jointTeamData = {
     },
     {
       name: "Amy Shuai",
+      initials: "AS",
       role: "Chief Financial Officer",
+      badge: "UBS • Deutsche Bank • RBS",
       company: "Flexionics" as const,
       highlights: [
         "25+ years in global investment banking and M&A transaction structuring.",
@@ -902,7 +906,9 @@ export const jointTeamData = {
     },
     {
       name: "Appointed CTO",
+      initials: "CTO",
       role: "Chief Technology Officer",
+      badge: "Tier-1 Bank AI/ML Head",
       company: "Flexionics" as const,
       highlights: [
         "Former Head of AI/ML at Tier-1 Global Investment Bank.",
@@ -911,7 +917,9 @@ export const jointTeamData = {
     },
     {
       name: "Giridhar Gandi",
+      initials: "GG",
       role: "Head of Flexibility",
+      badge: "Siemens Energy • VPP Specialist",
       company: "Flexionics" as const,
       highlights: [
         "Former power systems engineer at Siemens Energy (VPPs & grid stability).",
@@ -920,7 +928,9 @@ export const jointTeamData = {
     },
     {
       name: "Umang Thakkar",
+      initials: "UT",
       role: "Head of AI & Automation",
+      badge: "Iceberg Edge & Harbour Lead",
       company: "Flexionics" as const,
       highlights: [
         "Lead architect of Iceberg Edge & Harbour orchestration systems.",
@@ -931,7 +941,9 @@ export const jointTeamData = {
   koltrast: [
     {
       name: "Colin Chapple",
+      initials: "CC",
       role: "Chief Engineer & Ops Director",
+      badge: "25+ Yrs Power Infrastructure",
       company: "Koltrast" as const,
       highlights: [
         "25+ years directing industrial power projects and substations.",
@@ -940,7 +952,9 @@ export const jointTeamData = {
     },
     {
       name: "Joel Roden",
+      initials: "JR",
       role: "Senior HV Electrician",
+      badge: "Certified Swedish HV Specialist",
       company: "Koltrast" as const,
       highlights: [
         "Certified Swedish high-voltage electrical specialist.",
@@ -949,7 +963,9 @@ export const jointTeamData = {
     },
     {
       name: "Craig Taylor",
+      initials: "CT",
       role: "Site Operations & Network Lead",
+      badge: "Edge Telecom & Container Ops",
       company: "Koltrast" as const,
       highlights: [
         "Manages multi-carrier network links, failover gateways, and cooling.",
@@ -958,7 +974,9 @@ export const jointTeamData = {
     },
     {
       name: "Oskar Tullberg",
+      initials: "OT",
       role: "Systems & Hardware Tech",
+      badge: "Server Diagnostics & Racks",
       company: "Koltrast" as const,
       highlights: [
         "Maintains on-site edge hardware, server racks, and PDUs.",
@@ -967,7 +985,9 @@ export const jointTeamData = {
     },
     {
       name: "Vedran Klaic",
+      initials: "VK",
       role: "Systems & Hardware Tech",
+      badge: "Field Maintenance & Telemetry",
       company: "Koltrast" as const,
       highlights: [
         "Conducts routine field inspections and physical equipment upkeep.",

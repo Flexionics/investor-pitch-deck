@@ -992,100 +992,141 @@ export const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, totalSlides
           subtitle={slide.subtitle}
         >
           <div className="flex flex-col justify-between h-full py-1 gap-3.5">
-            {/* Row 1: Flexionics Software & Financial Architecture (5 Cols) */}
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#6b21a8] bg-purple-50 px-3 py-0.5 rounded-full border border-purple-200">
-                    Flexionics Leadership &amp; Core Engineering
-                  </span>
-                  <span className="text-sm text-slate-600 font-medium">
-                    Software IP, Algorithmic Energy Trading, AI &amp; Capital Markets
-                  </span>
-                </div>
-                <span className="text-xs font-mono font-bold text-[#6b21a8]">Zug, Switzerland</span>
-              </div>
-
-              <div className="grid grid-cols-5 gap-3.5">
-                {jointTeamData.flexionics.map((member, idx) => (
-                  <div
-                    key={idx}
-                    className="inst-card p-3.5 flex flex-col justify-between border-t-4 border-t-[#6b21a8] bg-white shadow-xs"
-                  >
-                    <div>
-                      <h4 className="text-[15.5px] font-black text-slate-900 leading-tight mb-1">
-                        {member.name}
-                      </h4>
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#6b21a8] mb-2 leading-tight">
-                        {member.role}
-                      </p>
-                      <ul className="space-y-1.5">
-                        {member.highlights.map((pt, j) => (
-                          <li key={j} className="text-[13px] text-slate-700 leading-snug flex items-start gap-1.5">
-                            <span className="text-[#6b21a8] font-bold text-xs shrink-0 leading-none mt-0.5">•</span>
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+            {/* 2-Column Split: Flexionics (Left) & Koltrast (Right) */}
+            <div className="grid grid-cols-2 gap-5 flex-1 min-h-0">
+              {/* Column 1: Flexionics Leadership & Core Engineering */}
+              <div className="flex flex-col justify-between h-full bg-purple-50/40 rounded-2xl border border-purple-200/80 p-3.5 shadow-xs">
+                {/* Column Header */}
+                <div className="flex items-center justify-between pb-2 border-b border-purple-200/80 mb-2 shrink-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-black uppercase tracking-wider text-white bg-[#6b21a8] px-3 py-1 rounded-md shadow-xs">
+                      Flexionics Energy AG
+                    </span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#6b21a8] bg-purple-100/70 px-2.5 py-1 rounded-md border border-purple-200">
+                      Software IP, AI &amp; Risk Systems
+                    </span>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Row 2: Koltrast Nordic Power & Infrastructure Operations (5 Cols) */}
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#047857] bg-emerald-50 px-3 py-0.5 rounded-full border border-emerald-200">
-                    Koltrast Nordic Infrastructure &amp; Site Operations
-                  </span>
-                  <span className="text-sm text-slate-600 font-medium">
-                    High-Voltage Grid Engineering, Substation Works &amp; On-Site Technicians
-                  </span>
-                </div>
-                <span className="text-xs font-mono font-bold text-[#047857]">Sweden (SE1 &amp; SE2)</span>
-              </div>
-
-              <div className="grid grid-cols-5 gap-3.5">
-                {jointTeamData.koltrast.map((member, idx) => (
-                  <div
-                    key={idx}
-                    className="inst-card p-3.5 flex flex-col justify-between border-t-4 border-t-[#047857] bg-white shadow-xs"
-                  >
-                    <div>
-                      <h4 className="text-[15.5px] font-black text-slate-900 leading-tight mb-1">
-                        {member.name}
-                      </h4>
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-[#047857] mb-2 leading-tight">
-                        {member.role}
-                      </p>
-                      <ul className="space-y-1.5">
-                        {member.highlights.map((pt, j) => (
-                          <li key={j} className="text-[13px] text-slate-700 leading-snug flex items-start gap-1.5">
-                            <span className="text-[#047857] font-bold text-xs shrink-0 leading-none mt-0.5">•</span>
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-slate-700 bg-white px-2.5 py-1 rounded-md border border-purple-200/70 shadow-2xs">
+                    <span className="w-2 h-2 rounded-full bg-purple-600 inline-block" />
+                    Zug, Switzerland
                   </div>
-                ))}
+                </div>
+
+                {/* 5 Member Cards */}
+                <div className="flex flex-col justify-between flex-1 gap-2 min-h-0">
+                  {jointTeamData.flexionics.map((member, idx) => (
+                    <div
+                      key={idx}
+                      className="inst-card p-2.5 px-3.5 bg-white border border-purple-200/70 rounded-xl shadow-2xs hover:border-purple-400 hover:shadow-xs transition-all flex items-center gap-3.5"
+                    >
+                      {/* Avatar Badge */}
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-700 to-indigo-800 text-white font-black text-sm flex items-center justify-center shrink-0 shadow-xs border border-purple-400/30">
+                        {member.initials}
+                      </div>
+
+                      {/* Member Details */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between mb-1">
+                          <div className="flex items-center gap-2">
+                            <h4 className="text-[15.5px] font-black text-slate-900 tracking-tight leading-tight">
+                              {member.name}
+                            </h4>
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#6b21a8] bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
+                              {member.role}
+                            </span>
+                          </div>
+                          <span className="text-[11.5px] font-semibold text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200 shrink-0">
+                            {member.badge}
+                          </span>
+                        </div>
+
+                        <div className="space-y-0.5">
+                          {member.highlights.map((pt, j) => (
+                            <div key={j} className="text-[13.5px] text-slate-700 leading-snug flex items-start gap-1.5">
+                              <span className="text-[#6b21a8] font-bold text-xs shrink-0 leading-none mt-0.5">▸</span>
+                              <span>{pt}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Column 2: Koltrast Nordic Infrastructure & Site Operations */}
+              <div className="flex flex-col justify-between h-full bg-emerald-50/40 rounded-2xl border border-emerald-200/80 p-3.5 shadow-xs">
+                {/* Column Header */}
+                <div className="flex items-center justify-between pb-2 border-b border-emerald-200/80 mb-2 shrink-0">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-black uppercase tracking-wider text-white bg-[#047857] px-3 py-1 rounded-md shadow-xs">
+                      Koltrast Energy Solutions AB
+                    </span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#047857] bg-emerald-100/70 px-2.5 py-1 rounded-md border border-emerald-200">
+                      Nordic Infrastructure &amp; Site Ops
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs font-mono font-bold text-slate-700 bg-white px-2.5 py-1 rounded-md border border-emerald-200/70 shadow-2xs">
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 inline-block" />
+                    Sweden (SE1 &amp; SE2)
+                  </div>
+                </div>
+
+                {/* 5 Member Cards */}
+                <div className="flex flex-col justify-between flex-1 gap-2 min-h-0">
+                  {jointTeamData.koltrast.map((member, idx) => (
+                    <div
+                      key={idx}
+                      className="inst-card p-2.5 px-3.5 bg-white border border-emerald-200/70 rounded-xl shadow-2xs hover:border-emerald-400 hover:shadow-xs transition-all flex items-center gap-3.5"
+                    >
+                      {/* Avatar Badge */}
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-700 to-teal-800 text-white font-black text-sm flex items-center justify-center shrink-0 shadow-xs border border-emerald-400/30">
+                        {member.initials}
+                      </div>
+
+                      {/* Member Details */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between mb-1">
+                          <div className="flex items-center gap-2">
+                            <h4 className="text-[15.5px] font-black text-slate-900 tracking-tight leading-tight">
+                              {member.name}
+                            </h4>
+                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#047857] bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                              {member.role}
+                            </span>
+                          </div>
+                          <span className="text-[11.5px] font-semibold text-slate-600 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-200 shrink-0">
+                            {member.badge}
+                          </span>
+                        </div>
+
+                        <div className="space-y-0.5">
+                          {member.highlights.map((pt, j) => (
+                            <div key={j} className="text-[13.5px] text-slate-700 leading-snug flex items-start gap-1.5">
+                              <span className="text-[#047857] font-bold text-xs shrink-0 leading-none mt-0.5">▸</span>
+                              <span>{pt}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
             {/* Bottom Grounding Anchor Banner */}
-            <div className="inst-card p-3.5 px-5 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between shadow-sm shrink-0">
+            <div className="inst-card p-3.5 px-6 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between shadow-xs shrink-0">
               <div className="flex items-center gap-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#047857] animate-pulse shrink-0" />
-                <p className="text-sm font-bold text-slate-900">
+                <p className="text-[13.5px] font-bold text-slate-900">
                   Turnkey Execution Capability:{" "}
                   <span className="text-slate-600 font-normal">
-                    Seamless synthesis of Tier-1 financial risk management (HKEX, Deutsche Bank), energy quant modeling (Siemens Energy), and certified on-the-ground Swedish high-voltage engineering.
+                    Seamless synthesis of Tier-1 financial risk management (HKEX, Deutsche Bank), grid flexibility systems (Siemens Energy), and certified on-the-ground Swedish high-voltage engineering.
                   </span>
                 </p>
               </div>
-              <span className="text-xs font-bold text-[#047857] uppercase tracking-wider bg-emerald-100/70 px-3.5 py-1 rounded-full shrink-0 border border-emerald-200">
+              <span className="text-xs font-bold text-[#047857] uppercase tracking-wider bg-emerald-100/80 px-3.5 py-1 rounded-full shrink-0 border border-emerald-300">
                 10-Member Joint Operating Unit
               </span>
             </div>
